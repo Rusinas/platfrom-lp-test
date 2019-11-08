@@ -24,5 +24,5 @@ export default {
     width: 100%
     height: calc(100% + 1px) // фикс бага из-за бордера у инпута
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1)
-
+    z-index: 1
 </style>

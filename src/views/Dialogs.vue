@@ -2,10 +2,13 @@
 .dialogs-wrapper
     .dialogs
         DialogsList
-        Messages
+        .select-dialog(v-if="!$route.params.id")
+            p Выберите диалог
+        router-view
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import DialogsList from '@/components/DialogsList'
 import Messages from '@/components/Messages'
 
@@ -14,6 +17,12 @@ export default {
     components: {
         DialogsList,
         Messages
+    },
+    mounted() {
+        this.getDialogs()
+    },
+    methods: {
+        ...mapActions(['getDialogs'])
     }
 }
 </script>
@@ -34,5 +43,15 @@ export default {
     justify-items: center
     grid-template-columns: 300px 680px
     height: 700px
-    overflow: hidden
+    // overflow: hidden
+
+.select-dialog
+    font-size: 14px
+    color: #dadada
+    display: flex
+    align-items: center 
+    justify-content: center
+    width: 100% 
+    height: 100% 
+    background-color: white
 </style>

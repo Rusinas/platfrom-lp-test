@@ -6,19 +6,19 @@ export default [
         parts: [
             {
                 id: 1,
-                author: 'vasya',
+                author: 'Vasily',
                 text: 'Привет, как дела?',
                 created: '2019-08-01 23:59',
             },
             {
                 id: 2,
-                author: 'petya',
+                author: 'Petr',
                 created: '2019-08-02 01:20',
                 text: 'Привет, все хорошо, спасибо!',
             },
             {
                 id: 3,
-                author: 'petya',
+                author: 'Petr',
                 created: '2019-08-02 05:20',
                 text: 'А у тебя?',
             },
@@ -31,19 +31,19 @@ export default [
         parts: [
             {
                 id: 1,
-                author: 'petr',
+                author: 'Vasily',
                 created: '2019-08-06 12:20',
                 text: 'Здравствуйте, тут есть кто-нибудь?',
             },
             {
                 id: 2,
-                author: 'vasiliy',
+                author: 'Petr',
                 created: '2019-08-06 12:34',
                 text: 'Да, я вас слушаю!',
             },
             {
                 id: 3,
-                author: 'petr',
+                author: 'Vasily',
                 created: '2019-08-06 12:38',
                 text: 'Помогите мне настроить домен!',
             },
