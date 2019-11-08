@@ -73,7 +73,6 @@ export default {
         width: 80px
         height: 100%
         border: none
-        transform: translateY(-1px)
         background-color: #398BFF
         color: white
         

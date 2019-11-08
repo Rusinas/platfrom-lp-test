@@ -43,7 +43,7 @@ export default {
     justify-items: center
     grid-template-columns: 300px 680px
     height: 700px
-    // overflow: hidden
+    overflow: hidden
 
 .select-dialog
     font-size: 14px

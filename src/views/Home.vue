@@ -27,6 +27,7 @@ export default {
         &:visited
             color: #64B5F6
     .button
+        margin-top: 2em
         background-color: #64B5F6
         padding: 15px 25px
         border-radius: 6px
