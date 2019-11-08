@@ -56,7 +56,7 @@ export default new Vuex.Store({
       })
     },
     countMessages({ state, commit }) {
-      const count = state.dialogs.reduce((acc, current) => acc.parts.length + current.parts.length)
+      const count = state.dialogs.reduce((acc, current) =>  acc + current.parts.length, 0)
       commit('SET_TOTAL_MESSAGES_COUNT', count)
     }
   }
