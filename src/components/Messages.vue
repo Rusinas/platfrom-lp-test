@@ -19,10 +19,11 @@ export default {
 
 <style lang="sass" scoped>
 .messages
-    display: flex
+    display: grid
+    grid-template-rows: 1fr 80px
     flex-direction: column
     width: 100%
-    height: calc(100% + 1px) // фикс бага из-за бордера у инпута
+    // height: 700px
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1)
     z-index: 1
 </style>

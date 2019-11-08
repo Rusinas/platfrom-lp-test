@@ -1,19 +1,21 @@
 <template lang="pug">
 .message-input
-    input(type="text" placeholder="Введите текст..." v-model="message")
+    input(type="text" placeholder="Введите текст..." v-model="message" :disabled="sending")
     button(@click="sendMessage()")
         PlaneIcon(v-if="!sending")
-        p(v-else) 123
+        LoadingIcon(v-else color="light") 
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex'
 import PlaneIcon from '@/components/Icons/Plane'
+import LoadingIcon from '@/components/Icons/Loading'
 
 export default {
     name: 'MessageInput',
     components: {
-        PlaneIcon
+        PlaneIcon,
+        LoadingIcon
     },
     data() {
         return {
@@ -57,8 +59,12 @@ export default {
         width: calc(100% - 80px)
         padding: 0 30px
         border: none
+        font-size: 14px
         border-top: 1px solid #E9EDF2
 
+        &:disabled 
+            background-color: #F5F5F5
+            
         &:focus, &:active
             outline: none
 

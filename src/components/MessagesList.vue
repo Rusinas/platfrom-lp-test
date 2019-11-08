@@ -1,6 +1,6 @@
 <template lang="pug">
-.messages-list(v-if="!loading")
-    .chat(v-chat-scroll)
+.messages-list(v-if="!loading" v-chat-scroll="{always: false, smooth: true}")
+    .chat 
         Message(v-for="message in messagesForSelectedDialog" :key="message.id" :message="message" :currentUser="currentUser")
 
 .loading(v-else)
@@ -47,26 +47,31 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.messages-list, .loading
-    display: flex
-    flex-direction: column
+.messages-list
     width: 100%
-    height: 700px
-    box-sizing: border-box
+    height: 620px
     background-color: white
+    overflow-y: auto
 
 .loading
+    display: flex
+    width: 100%
+    height: 620px
     justify-content: center
     align-items: center
+    font-weight: 300
     font-size: 14px
+    background-color: #fafafa
     color: #9E9E9E
+    p 
+        margin-left: 20px
 
-.messages-list
-    justify-content: flex-end
-
-.chat
-    max-height: 100%
-    padding: 0 40px
-    overflow: auto
+.chat 
+    display: grid
+    align-content: end
+    width: 100% 
+    min-height: 620px
+    padding: 40px 40px 0 40px
+    box-sizing: border-box
 
 </style>

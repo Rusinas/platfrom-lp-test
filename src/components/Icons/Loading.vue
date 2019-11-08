@@ -1,5 +1,5 @@
 <template>
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg :style="style" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 228.08 228.08" style="enable-background:new 0 0 228.08 228.08;" xml:space="preserve">
 <g>
 	<path d="M114.054,159.842c-4.142,0-7.5,3.358-7.5,7.5v53.237c0,4.142,3.358,7.5,7.5,7.5c4.143,0,7.5-3.358,7.5-7.5v-53.237
@@ -20,6 +20,20 @@
 </g>
 </svg>
 </template>
+
+<script>
+export default {
+	props: {
+		color: String
+	},
+	computed: {
+		style() {
+			return `fill: ${this.color === 'light' ? 'white' : '#212121'}`
+		}
+	}
+}
+</script>
+
 
 <style lang="sass" scoped>
 svg

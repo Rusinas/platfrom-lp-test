@@ -1,6 +1,7 @@
 <template lang="pug">
 .dialogs-list
-    .dialogs-header Сообщения 151
+    .dialogs-header.test Сообщения
+        span.total-messages {{ totalMessages }}
     Dialog(v-for="dialog in dialogs" :key="dialog.id" :dialog="dialog")
 </template>
 
@@ -13,7 +14,7 @@ export default {
         Dialog
     },
     computed: {
-        ...mapState(['dialogs'])
+        ...mapState(['dialogs', 'totalMessages'])
     }
 }
 </script>
@@ -35,4 +36,9 @@ export default {
         padding: 20px 25px
         border-bottom: 1px solid #E9EDF2
 
+.total-messages
+    color: #D2D8DE
+    font-size: 14px 
+    font-weight: 600 
+    margin-left: 5px
 </style>

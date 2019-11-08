@@ -27,6 +27,7 @@ export default {
     padding: 25px 20px
     max-width: 60%
     font-size: 14px 
+    font-weight: 300
     color: #474E54
     border-radius: 8px 8px 8px 0
     background-color: #F6F7F9
@@ -41,12 +42,13 @@ export default {
 .author
     color: black
     font-size: 13px
+    font-weight: 500
 
 .date
     color: #B7C0C8
     margin-left: 10px
     font-size: 10px
-    transform: translateY(1px)
+    transform: translateY(2px)
 
 .by-current-user
     justify-items: end    
