@@ -12,6 +12,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # Editor directories and files
+.history
+.history/
 .idea
 .vscode
 *.suo
