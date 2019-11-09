@@ -1,7 +1,7 @@
 <template lang="pug">
 .message-input
     input(type="text" placeholder="Введите текст..." v-model="message" :disabled="sending")
-    button(@click="sendMessage()")
+    button(@click="sendMessage()" :disabled="sending")
         PlaneIcon(v-if="!sending")
         LoadingIcon(v-else color="light") 
 </template>
@@ -29,7 +29,7 @@ export default {
     methods: {
         ...mapActions(['addMessageToDialog']),
         async sendMessage() {
-            if (!this.message) return
+            if (!this.message || this.sending) return
 
             const message = {
                 author: this.currentUser,
@@ -75,7 +75,7 @@ export default {
         border: none
         background-color: #398BFF
         color: white
-        
+
         &:hover
             background-color: darken(#398BFF, 5%)
 
